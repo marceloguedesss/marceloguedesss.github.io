@@ -794,6 +794,20 @@
       .case-meta,.feature-grid,.tech-grid,.scope-diff{grid-template-columns:1fr}
     }
 
+
+    /* La Brasa: preview do projeto publicado */
+    .la-brasa-preview{display:block;background:#100f0e;min-height:390px}
+    .la-brasa-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% center;transition:transform .6s ease}
+    .la-brasa-preview::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(12,8,5,.92) 100%);pointer-events:none}
+    .la-brasa-preview:hover img{transform:scale(1.035)}
+    .la-brasa-preview:focus-visible{outline:3px solid #ff7a18;outline-offset:-4px}
+    .la-brasa-preview-caption{position:absolute;left:30px;right:30px;bottom:30px;z-index:1;display:grid;gap:12px}
+    .la-brasa-preview-caption span{font-size:11px;font-weight:800;letter-spacing:.13em;color:#ffc590}
+    .la-brasa-preview-caption strong{font-size:clamp(1.8rem,3vw,2.5rem);letter-spacing:-.04em;color:#fff5e9}
+    .la-brasa-preview-caption .la-brasa-preview-link{color:#fff5e9;letter-spacing:0;font-size:13px}
+    .project-content .la-brasa-note{font-size:12px;line-height:1.6;margin-top:18px}
+    @media(max-width:620px){.la-brasa-preview{min-height:310px}.la-brasa-preview-caption{left:24px;right:24px;bottom:24px}}
+    @media(prefers-reduced-motion:reduce){.la-brasa-preview img{transition:none}.la-brasa-preview:hover img{transform:none}}
   </style>
 </head>
 <body>
@@ -921,7 +935,7 @@
             <div class="eyebrow">02 / Projetos</div>
             <h2>Projetos em destaque.</h2>
           </div>
-          <p>Um projeto real, minha trilha de estudos e os próximos cases que vou construir conforme avanço em desenvolvimento e automação.</p>
+          <p>Aplicações e experiências web publicadas, minha trilha de estudos e os próximos projetos em desenvolvimento e automação.</p>
         </div>
 
         <div class="projects">
@@ -958,10 +972,39 @@
             </div>
           </article>
 
+          <article class="project reveal" id="projeto-la-brasa">
+            <div class="project-content">
+              <div>
+                <div class="project-num">PROJECT_02 // DEMO // LANDING PAGE</div>
+                <h3>La Brasa Burger Cruzeiro</h3>
+                <p>Landing page demonstrativa para uma hamburgueria, com identidade visual marcante, apresentação dos burgers e acesso direto ao cardápio, WhatsApp e delivery. Interface responsiva com animações ao rolar e efeitos de profundidade.</p>
+                <div class="tags">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">CSS responsivo</span>
+                  <span class="tag">Animações on-scroll</span>
+                  <span class="tag">GitHub Pages</span>
+                </div>
+                <p class="la-brasa-note">Proposta visual independente, criada para apresentar uma experiência digital para a marca.</p>
+              </div>
+              <div class="project-actions">
+                <a class="btn primary" href="https://marceloguedesss.github.io/la-brasa/" target="_blank" rel="noopener noreferrer">Ver demonstração ao vivo ↗</a>
+              </div>
+            </div>
+            <a class="project-visual la-brasa-preview" href="https://marceloguedesss.github.io/la-brasa/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demonstração da La Brasa Burger Cruzeiro">
+              <img src="./la-brasa/images/hero.webp" alt="Hambúrguer artesanal em uma composição ilustrativa do site La Brasa" loading="lazy" decoding="async" width="1536" height="1024" />
+              <div class="la-brasa-preview-caption">
+                <span>LA BRASA BURGER · CRUZEIRO</span>
+                <strong>Sabor sem limites.</strong>
+                <span class="la-brasa-preview-link">Explorar o site ↗</span>
+              </div>
+            </a>
+          </article>
+
           <article class="project reveal">
             <div class="project-content">
               <div>
-                <div class="project-num">LAB_02 // ROADMAP</div>
+                <div class="project-num">LAB_03 // ROADMAP</div>
                 <h3>Web & Automation Lab</h3>
                 <p>Espaço para os próximos projetos práticos de sites e automações, seguindo a mesma ideia de documentar problema, solução, arquitetura, evolução e resultado de cada case.</p>
                 <div class="tags"><span class="tag">Roadmap</span><span class="tag">Freelance</span><span class="tag">Build in public</span></div>
@@ -983,7 +1026,7 @@
           <article class="project reveal">
             <div class="project-content">
               <div>
-                <div class="project-num">LAB_03 // SECURITY</div>
+                <div class="project-num">LAB_04 // SECURITY</div>
                 <h3>HawkSec Studies</h3>
                 <p>Registro da minha evolução em cybersecurity: fundamentos de Linux e redes, CTFs, reversing, binary exploitation, buffer overflow, Assembly, GDB, pwntools e criptografia.</p>
                 <div class="tags"><span class="tag">Fundamentos</span><span class="tag">CTF</span><span class="tag">Exploitation</span></div>
@@ -1507,8 +1550,9 @@
       ],
       projects: [
         "01 Aujuda! — evolução de aplicação em C para uma experiência Web publicada",
-        "02 Web & Automation Lab — roadmap",
-        "03 HawkSec Studies — continuous learning"
+        "02 La Brasa Burger Cruzeiro — landing page demonstrativa publicada",
+        "03 Web & Automation Lab — roadmap",
+        "04 HawkSec Studies — continuous learning"
       ],
       languages: ["Portuguese: native", "English: intermediate (B1)"],
       formation: [
