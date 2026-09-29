@@ -809,6 +809,20 @@
     .project-content .la-brasa-note{font-size:12px;line-height:1.6;margin-top:18px}
     @media(max-width:620px){.la-brasa-preview{min-height:310px}.la-brasa-preview-caption{left:24px;right:24px;bottom:24px}}
     @media(prefers-reduced-motion:reduce){.la-brasa-preview img{transition:none}.la-brasa-preview:hover img{transform:none}}
+
+    /* Aujuda: capa ilustrativa do projeto */
+    #projeto-aujuda{scroll-margin-top:100px}
+    .aujuda-preview{display:block;background:#10201c;min-height:390px}
+    .aujuda-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;transition:transform .6s ease}
+    .aujuda-preview::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(5,20,16,.94) 100%);pointer-events:none}
+    .aujuda-preview:hover img{transform:scale(1.035)}
+    .aujuda-preview:focus-visible{outline:3px solid var(--accent);outline-offset:-4px}
+    .aujuda-preview-caption{position:absolute;left:30px;right:30px;bottom:30px;z-index:1;display:grid;gap:12px}
+    .aujuda-preview-caption span{font-size:11px;font-weight:800;letter-spacing:.12em;color:#b8ffe3}
+    .aujuda-preview-caption strong{font-size:clamp(1.8rem,3vw,2.5rem);letter-spacing:-.04em;color:#f4fff9}
+    .aujuda-preview-caption .aujuda-preview-link{color:#f4fff9;letter-spacing:0;font-size:13px}
+    @media(max-width:620px){.aujuda-preview{min-height:350px}.aujuda-preview-caption{left:24px;right:24px;bottom:24px}}
+    @media(prefers-reduced-motion:reduce){.aujuda-preview img{transition:none}.aujuda-preview:hover img{transform:none}}
   </style>
 </head>
 <body>
@@ -940,7 +954,7 @@
         </div>
 
         <div class="projects">
-          <article class="project reveal">
+          <article class="project reveal" id="projeto-aujuda">
             <div class="project-content">
               <div>
                 <div class="project-num">PROJECT_01 // REAL // C → WEB</div>
@@ -961,16 +975,14 @@
                 <a class="btn secondary" href="https://github.com/marceloguedesss/aujuda.github.io" target="_blank" rel="noopener noreferrer">Código Web</a>
               </div>
             </div>
-            <div class="project-visual">
-              <div class="ui-window">
-                <div class="ui-bar" style="width:52%"></div>
-                <div class="ui-grid">
-                  <div class="ui-box"></div>
-                  <div class="ui-box"></div>
-                  <div class="ui-box tall"><div class="spark"></div></div>
-                </div>
+            <a class="project-visual aujuda-preview" href="https://marceloguedesss.github.io/aujuda.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o projeto Aujuda de cadastro e busca de animais perdidos">
+              <img src="./assets/aujuda-cover.webp" alt="Imagem ilustrativa de um cachorro caramelo e um gato lado a lado, representando o reencontro de animais" loading="lazy" decoding="async" width="1000" height="1000" />
+              <div class="aujuda-preview-caption">
+                <span>AUJUDA! · CADASTRE, BUSQUE, REENCONTRE</span>
+                <strong>Uma rede para reencontros.</strong>
+                <span class="aujuda-preview-link">Explorar o projeto ↗</span>
               </div>
-            </div>
+            </a>
           </article>
 
           <article class="project reveal" id="projeto-la-brasa">
